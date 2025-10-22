@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .contact-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .contact-header p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+    }
+    .contact-info {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .contact-form {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+    }
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .submit-btn {
+      background-color: var(--accent-primary);
+      color: white;
+      border: none;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background-color: var(--accent-hover);
+    }
+    .required {
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="logo.svg" alt="Logo" class="logo-img">
+        <span class="logo-text">YOUR NAME</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">About</a>
+        <a href="career.html" class="nav-link">Career</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h1>Contact</h1>
+        <p>Feel free to reach out to me for questions, inquiries, or collaborations. Open to new opportunities and challenges.</p>
+        <p style="margin-top: 1rem; font-weight: 600;">Let's create something amazing together</p>
+      </div>
+
+      <div class="contact-info">
+        <h2 style="margin-bottom: 1rem;">Get in Touch</h2>
+        <p>Please fill out the form below and I'll get back to you as soon as possible.</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="firstName">First Name <span class="required">*</span></label>
+          <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Your last name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" placeholder="Enter your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copyright">
+          © 2025 • <a href="https://linktr.ee/yourusername" target="_blank" rel="noopener noreferrer">Y O U R  N A M E</a> — All rights reserved.
+        </p>
+        <nav class="footer-nav">
+          <a href="index.html">About</a>
+          <span>•</span>
+          <a href="career.html">Career</a>
+          <span>•</span>
+          <a href="blog.html">Blog</a>
+          <span>•</span>
+          <a href="projects.html">Projects</a>
+          <span>•</span>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="back-to-top" aria-label="Scroll to top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
